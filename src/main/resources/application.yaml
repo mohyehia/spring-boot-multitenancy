@@ -1,3 +1,20 @@
 spring:
   application:
     name: spring-boot-multitenancy
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: myuser
+    password: secret
+multi-tenancy:
+  http:
+    header-name: X-TenantId
+
+
+management:
+  otlp:
+    metrics:
+      export:
+        enabled: false
+  opentelemetry:
+    enabled: false
